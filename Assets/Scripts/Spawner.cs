@@ -9,7 +9,10 @@ namespace Zoo
         private void Start()
         {
             foreach (GameObject animal in animals)
-                Instantiate(animal, transform);
+            {
+                GameObject newAnimal = Instantiate(animal, transform);
+                newAnimal.name = animal.name;
+            }
         }
     }
 }
