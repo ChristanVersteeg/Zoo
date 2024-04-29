@@ -7,23 +7,9 @@ namespace Zoo
     internal class Tiger : Animal
     {
         public string name;
-        [SerializeField]
-        private GameObject Balloon;
-        [SerializeField]
-        private Text text;
 
         protected override string HelloText => "rraaarww";
-
-        public void SayHello()
-        {
-            Balloon.SetActive(true);
-        }
-
-        public void EatMeat()
-        {
-            Balloon.SetActive(true);
-            text.text = "nomnomnom thx wubalubadubdub";
-        }
+        //public void EatMeat() => text.text = "nomnomnom thx wubalubadubdub";
 
         public void PerformTrick()
         {

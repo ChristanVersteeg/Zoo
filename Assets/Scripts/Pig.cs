@@ -10,7 +10,6 @@ namespace Zoo
 
         protected override string HelloText => "oink oink";
 
-        // public void SayHello() => text.text = "oink oink";
         // public void EatLeaves() => text.text = "munch munch oink";
         // public void EatMeat() => text.text = "nomnomnom oink thx";
 

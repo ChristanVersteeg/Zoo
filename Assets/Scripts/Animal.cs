@@ -4,23 +4,23 @@ using UnityEngine;
 
 public abstract class Animal : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI balloon;
+    private GameObject balloon;
+    private TextMeshProUGUI text;
+
     protected abstract string HelloText { get; }
 
     private void Hello()
     {
-        print(HelloText);
-        //balloon.text = HelloText;
-        //balloon.gameObject.SetActive(true);
+        text.text = HelloText;
+        balloon.SetActive(true);
     }
 
-    private void OnEnable()
+    private void Awake()
     {
-        ButtonManager.GetButton(ButtonType.Hello).onClick.AddListener(Hello);
+        text = GetComponentInChildren<TextMeshProUGUI>(true);
+        balloon = text.transform.parent.gameObject;
     }
 
-    private void OnDisable()
-    {
-        ButtonManager.GetButton(ButtonType.Hello).onClick.RemoveListener(Hello);
-    }
+    private void OnEnable() => ButtonManager.GetButton(ButtonType.Hello).onClick.AddListener(Hello);
+    private void OnDisable() => ButtonManager.GetButton(ButtonType.Hello).onClick.RemoveListener(Hello);
 }
