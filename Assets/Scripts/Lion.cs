@@ -3,13 +3,13 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    internal class Lion : Animal
+    internal class Lion : Animal, ICarnivore
     {
         public string name;
 
-        protected override string HelloText => "roooaoaaaaar";
-
-        //public void SayHello() => text.text = "roooaoaaaaar";
-        //public void EatMeat() => text.text = "nomnomnom thx mate";
+        protected override string Text => "roooaoaaaaar";
+        public Carnivore Carnivore { get; set; }
+        private void Start() => Carnivore = gameObject.GetComponent<Carnivore>();
+        public string EatText => "nomnomnom thx mate";
     }
 }

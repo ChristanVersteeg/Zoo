@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Zoo
 {
-    internal class Pig : Animal
+    internal class Pig : Animal, IHerbivore, ICarnivore
     {
         public string name;
 
-        protected override string HelloText => "oink oink";
-
-        // public void EatLeaves() => text.text = "munch munch oink";
-        // public void EatMeat() => text.text = "nomnomnom oink thx";
+        protected override string Text => "oink oink";
+        public Herbivore Herbivore { get; set; }
+        public Carnivore Carnivore { get; set; }
+        private void Start()
+        {
+            Herbivore = gameObject.AddComponent<Herbivore>();
+            Carnivore = gameObject.AddComponent<Carnivore>();
+        }
+        string IHerbivore.EatText => "munch munch oink";
+        string ICarnivore.EatText => "nomnomnom oink thx";
 
         public void PerformTrick()
         {

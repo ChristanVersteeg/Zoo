@@ -1,10 +1,12 @@
 ﻿namespace Zoo
 {
-    internal class Hippo : Animal
+    internal class Hippo : Animal, IHerbivore
     {
         public string name;
 
-        protected override string HelloText => "splash";
-        //public void EatLeaves() => text.text = "munch munch lovely";
+        protected override string Text => "splash";
+        public Herbivore Herbivore { get; set; }
+        private void Start() => Herbivore = gameObject.AddComponent<Herbivore>();
+        public string EatText => "munch munch lovely";
     }
 }
