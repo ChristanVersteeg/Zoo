@@ -1056,11 +1056,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0d28aae83133c469baad1be57e1fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lion: {fileID: 1272796901603832, guid: 20880f50fd7c97041a2f99c8fd3890cf, type: 3}
-  hippo: {fileID: 1503268068017508, guid: e7f8c0fa6e23a0846b1c14e803d8dc87, type: 3}
-  pig: {fileID: 1157437131242584, guid: b4ef08bb34d7e8d42a322a3fb477bd93, type: 3}
-  tiger: {fileID: 1635293449333400, guid: 9d8f88e4e4860ac489141755f7175db2, type: 3}
-  zebra: {fileID: 1072593225874480, guid: ca5452b56f32abc46bc83ba2db5f04fd, type: 3}
+  animals:
+  - {fileID: 1503268068017508, guid: e7f8c0fa6e23a0846b1c14e803d8dc87, type: 3}
+  - {fileID: 1272796901603832, guid: 20880f50fd7c97041a2f99c8fd3890cf, type: 3}
+  - {fileID: 1157437131242584, guid: b4ef08bb34d7e8d42a322a3fb477bd93, type: 3}
+  - {fileID: 1635293449333400, guid: 9d8f88e4e4860ac489141755f7175db2, type: 3}
+  - {fileID: 1072593225874480, guid: ca5452b56f32abc46bc83ba2db5f04fd, type: 3}
 --- !u!1 &924011753
 GameObject:
   m_ObjectHideFlags: 0
