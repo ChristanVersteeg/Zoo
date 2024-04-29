@@ -9,6 +9,7 @@ public abstract class Animal : MonoBehaviour
 
     protected abstract string Text { get; }
     protected virtual ButtonType ButtonType => ButtonType.Hello;
+    protected void AddDiet<T>(T diet) where T : MonoBehaviour => gameObject.AddComponent<T>();
 
     private void Speak()
     {

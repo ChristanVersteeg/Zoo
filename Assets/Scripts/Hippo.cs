@@ -6,7 +6,7 @@
 
         protected override string Text => "splash";
         public Herbivore Herbivore { get; set; }
-        private void Start() => Herbivore = gameObject.AddComponent<Herbivore>();
+        private void Start() => AddDiet(Herbivore);
         public string EatText => "munch munch lovely";
     }
 }

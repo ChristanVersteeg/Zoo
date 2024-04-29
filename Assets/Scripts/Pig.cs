@@ -8,13 +8,14 @@ namespace Zoo
         public string name;
 
         protected override string Text => "oink oink";
-        public Herbivore Herbivore { get; set; }
-        public Carnivore Carnivore { get; set; }
+        public Herbivore Herbivore { get; }
+        public Carnivore Carnivore { get; }
         private void Start()
         {
-            Herbivore = gameObject.AddComponent<Herbivore>();
-            Carnivore = gameObject.AddComponent<Carnivore>();
+            AddDiet(Herbivore);
+            AddDiet(Carnivore);
         }
+
         string IHerbivore.EatText => "munch munch oink";
         string ICarnivore.EatText => "nomnomnom oink thx";
 

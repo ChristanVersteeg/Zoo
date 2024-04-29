@@ -9,7 +9,7 @@ namespace Zoo
 
         protected override string Text => "rraaarww";
         public Carnivore Carnivore { get; set; }
-        private void Start() => Carnivore = gameObject.AddComponent<Carnivore>();
+        private void Start() => AddDiet(Carnivore);
         public string EatText => "nomnomnom thx wubalubadubdub";
 
         public void PerformTrick()

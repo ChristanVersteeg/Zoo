@@ -9,8 +9,8 @@ namespace Zoo
 
         protected override string Text => "zebra zebra";
 
-        public Herbivore Herbivore { get; set; }
-        private void Start() => Herbivore = gameObject.AddComponent<Herbivore>();
+        public Herbivore Herbivore { get; }
+        private void Start() => AddDiet(Herbivore);
         public string EatText => "munch munch zank yee bra";
     }
 }
