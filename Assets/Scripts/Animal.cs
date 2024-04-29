@@ -8,6 +8,7 @@ public abstract class Animal : MonoBehaviour
 {
     private GameObject balloon;
     private TextMeshProUGUI text;
+    private new string name;
 
     protected abstract string Text { get; }
     protected virtual BehaviourType BehaviourType => BehaviourType.Hello;
@@ -17,6 +18,10 @@ public abstract class Animal : MonoBehaviour
 
     protected virtual void Behaviour()
     {
+        if (BehaviourType == BehaviourType.Hello
+            && ButtonManager.inputField.text != string.Empty
+            && ButtonManager.inputField.text != name) return;
+
         text.text = Text;
         balloon.SetActive(true);
     }
@@ -25,6 +30,10 @@ public abstract class Animal : MonoBehaviour
     {
         text = GetComponentInChildren<TextMeshProUGUI>(true);
         balloon = text.transform.parent.gameObject;
+
+        if (TryGetComponent(out IHerbivore herbivore))
+            name = herbivore.Name;
+        else name = GetComponent<ICarnivore>().Name;
     }
 
     private void OnEnable() => ButtonManager.GetButton(BehaviourType).onClick.AddListener(Behaviour);
