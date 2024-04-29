@@ -1,10 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Zebra : MonoBehaviour
+    internal class Zebra : MonoBehaviour
     {
         [SerializeField]
         private GameObject Balloon;

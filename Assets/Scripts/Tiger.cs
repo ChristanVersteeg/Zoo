@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Tiger : MonoBehaviour
+    internal class Tiger : MonoBehaviour
     {
         public string name;
         [SerializeField]
@@ -30,7 +30,7 @@ namespace Zoo
             StartCoroutine(DoTrick());
         }
 
-        IEnumerator DoTrick()
+        private IEnumerator DoTrick()
         {
             for (int i = 0; i < 360; i++)
             {

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Hippo:MonoBehaviour
+    internal class Hippo : MonoBehaviour
     {
         public string name;
         [SerializeField]
@@ -23,5 +23,5 @@ namespace Zoo
             text.text = "munch munch lovely";
         }
     }
-    
+
 }

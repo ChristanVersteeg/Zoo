@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Zoo
 {
-    class Spawner : MonoBehaviour
+    internal class Spawner : MonoBehaviour
     {
         [SerializeField]
         private GameObject lion, hippo, pig, tiger, zebra;
@@ -19,7 +17,7 @@ namespace Zoo
             Tiger wally = Instantiate(tiger, transform).GetComponent<Tiger>();
             wally.name = "wally";
             Zebra marty = Instantiate(zebra, transform).GetComponent<Zebra>();
-            marty.name = "marty";            
+            marty.name = "marty";
         }
     }
 }

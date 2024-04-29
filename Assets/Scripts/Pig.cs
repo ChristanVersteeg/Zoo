@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Pig : MonoBehaviour
+    internal class Pig : MonoBehaviour
     {
         public string name;
         [SerializeField]
@@ -35,7 +35,7 @@ namespace Zoo
             StartCoroutine(DoTrick());
         }
 
-        IEnumerator DoTrick()
+        private IEnumerator DoTrick()
         {
             for (int i = 0; i < 360; i++)
             {

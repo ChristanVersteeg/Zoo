@@ -1,10 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Lion : MonoBehaviour
+    internal class Lion : MonoBehaviour
     {
         [SerializeField]
         private GameObject Balloon;
