@@ -1,6 +1,4 @@
-﻿using Buttons;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace Zoo
 {
@@ -9,16 +7,10 @@ namespace Zoo
         [SerializeField]
         public string name;
 
+        protected override string Text => "zebra zebra";
+
         public Herbivore Herbivore { get; set; }
-        public override string Text { get; set; }
-
-        protected override void Awake()
-        {
-            base.Awake();
-
-            Herbivore = gameObject.AddComponent<Herbivore>();
-            Text = "zebra zebra";
-            Herbivore.Text = "munch munch zank yee bra";
-        }
+        private void Start() => Herbivore = gameObject.AddComponent<Herbivore>();
+        public string EatText => "munch munch zank yee bra";
     }
 }

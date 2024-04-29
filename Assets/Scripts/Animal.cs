@@ -7,7 +7,7 @@ public abstract class Animal : MonoBehaviour
     private GameObject balloon;
     private TextMeshProUGUI text;
 
-    public abstract string Text { get; set; }
+    protected abstract string Text { get; }
     protected virtual ButtonType ButtonType => ButtonType.Hello;
 
     private void Speak()
