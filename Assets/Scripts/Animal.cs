@@ -13,9 +13,9 @@ public abstract class Animal : MonoBehaviour
     protected virtual ButtonType ButtonType => ButtonType.Hello;
 
     [SuppressMessage(Category, CheckId, Justification = Justification)]
-    protected void AddDiet<T>(T diet) where T : MonoBehaviour => gameObject.AddComponent<T>();
+    protected void AddBehavior<T>(T diet) where T : MonoBehaviour => gameObject.AddComponent<T>();
 
-    private void Speak()
+    protected virtual void Speak()
     {
         text.text = Text;
         balloon.SetActive(true);

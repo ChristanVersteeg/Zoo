@@ -6,8 +6,8 @@
 
         protected override string Text => "splash";
 
-        public Herbivore Herbivore { get; set; }
-        private void Start() => AddDiet(Herbivore);
+        public Herbivore Herbivore { get; }
+        private void Start() => AddBehavior(Herbivore);
         public string EatText => "munch munch lovely";
     }
 }

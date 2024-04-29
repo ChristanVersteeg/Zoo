@@ -10,7 +10,7 @@ namespace Zoo
         protected override string Text => "zebra zebra";
 
         public Herbivore Herbivore { get; }
-        private void Start() => AddDiet(Herbivore);
+        private void Start() => AddBehavior(Herbivore);
         public string EatText => "munch munch zank yee bra";
     }
 }

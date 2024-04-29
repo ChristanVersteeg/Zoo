@@ -9,8 +9,8 @@ namespace Zoo
 
         protected override string Text => "roooaoaaaaar";
 
-        public Carnivore Carnivore { get; set; }
-        private void Start() => AddDiet(Carnivore);
+        public Carnivore Carnivore { get; }
+        private void Start() => AddBehavior(Carnivore);
         public string EatText => "nomnomnom thx mate";
     }
 }
