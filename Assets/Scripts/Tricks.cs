@@ -10,16 +10,18 @@ internal interface ICanTrick
 public class Tricks : Animal
 {
     protected override string Text => string.Empty;
-    protected override ButtonType ButtonType => ButtonType.Trick;
+    protected override BehaviourType BehaviourType => BehaviourType.Trick;
 
-    protected override void Speak() => StartCoroutine(DoTrick());
+    private WaitForEndOfFrame waitForEndOfFrame = new();
+
+    protected override void Behaviour() => StartCoroutine(DoTrick());
 
     private IEnumerator DoTrick()
     {
         for (int i = 0; i < 360; i++)
         {
             transform.localRotation = Quaternion.Euler(i, 0, 0);
-            yield return new WaitForEndOfFrame();
+            yield return waitForEndOfFrame;
         }
     }
 }

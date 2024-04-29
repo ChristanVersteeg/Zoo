@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Buttons
 {
-    public enum ButtonType
+    public enum BehaviourType
     {
         Leaves,
         Meat,
@@ -17,6 +17,6 @@ namespace Buttons
 
         private void Awake() => buttons = GetComponentsInChildren<Button>();
 
-        public static Button GetButton(ButtonType buttonType) => buttons[(int)buttonType];
+        public static Button GetButton(BehaviourType buttonType) => buttons[(int)buttonType];
     }
 }

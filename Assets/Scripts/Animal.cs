@@ -10,12 +10,12 @@ public abstract class Animal : MonoBehaviour
     private TextMeshProUGUI text;
 
     protected abstract string Text { get; }
-    protected virtual ButtonType ButtonType => ButtonType.Hello;
+    protected virtual BehaviourType BehaviourType => BehaviourType.Hello;
 
     [SuppressMessage(Category, CheckId, Justification = Justification)]
     protected void AddBehavior<T>(T diet) where T : MonoBehaviour => gameObject.AddComponent<T>();
 
-    protected virtual void Speak()
+    protected virtual void Behaviour()
     {
         text.text = Text;
         balloon.SetActive(true);
@@ -27,6 +27,6 @@ public abstract class Animal : MonoBehaviour
         balloon = text.transform.parent.gameObject;
     }
 
-    private void OnEnable() => ButtonManager.GetButton(ButtonType).onClick.AddListener(Speak);
-    private void OnDisable() => ButtonManager.GetButton(ButtonType).onClick.RemoveListener(Speak);
+    private void OnEnable() => ButtonManager.GetButton(BehaviourType).onClick.AddListener(Behaviour);
+    private void OnDisable() => ButtonManager.GetButton(BehaviourType).onClick.RemoveListener(Behaviour);
 }

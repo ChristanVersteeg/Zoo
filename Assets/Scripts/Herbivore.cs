@@ -19,5 +19,5 @@ public class Herbivore : Animal
     }
 
     protected override string Text => iherbivore.EatText;
-    protected override ButtonType ButtonType => ButtonType.Leaves;
+    protected override BehaviourType BehaviourType => BehaviourType.Leaves;
 }
