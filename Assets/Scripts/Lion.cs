@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    internal class Lion : MonoBehaviour
+    internal class Lion : Animal
     {
         [SerializeField]
         private GameObject Balloon;
@@ -11,6 +11,7 @@ namespace Zoo
         private Text text;
         public string name;
 
+        protected override string HelloText => "roooaoaaaaar";
 
         public void SayHello()
         {

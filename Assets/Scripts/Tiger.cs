@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    internal class Tiger : MonoBehaviour
+    internal class Tiger : Animal
     {
         public string name;
         [SerializeField]
@@ -12,11 +12,11 @@ namespace Zoo
         [SerializeField]
         private Text text;
 
+        protected override string HelloText => "rraaarww";
 
         public void SayHello()
         {
             Balloon.SetActive(true);
-            text.text = "rraaarww";
         }
 
         public void EatMeat()

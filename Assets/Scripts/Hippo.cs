@@ -3,13 +3,15 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    internal class Hippo : MonoBehaviour
+    internal class Hippo : Animal
     {
         public string name;
         [SerializeField]
         private GameObject Balloon;
         [SerializeField]
         private Text text;
+
+        protected override string HelloText => "splash";
 
         public void SayHello()
         {
