@@ -5,9 +5,10 @@ namespace Zoo
 {
     internal class Pig : Animal, IHerbivore, ICarnivore
     {
-        public string name;
+        public string Name => "Dora";
 
         protected override string Text => "oink oink";
+
         public Herbivore Herbivore { get; }
         public Carnivore Carnivore { get; }
         private void Start()
@@ -15,7 +16,6 @@ namespace Zoo
             AddDiet(Herbivore);
             AddDiet(Carnivore);
         }
-
         string IHerbivore.EatText => "munch munch oink";
         string ICarnivore.EatText => "nomnomnom oink thx";
 

@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Zoo
 {
     internal class Zebra : Animal, IHerbivore
     {
-        [SerializeField]
-        public string name;
+        public string Name => "Marty";
 
         protected override string Text => "zebra zebra";
 

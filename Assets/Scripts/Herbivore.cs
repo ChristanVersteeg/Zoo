@@ -2,6 +2,7 @@ using Buttons;
 
 internal interface IHerbivore
 {
+    string Name { get; }
     string EatText { get; }
     Herbivore Herbivore { get; }
 }

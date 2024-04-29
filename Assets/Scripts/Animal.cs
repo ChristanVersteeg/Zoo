@@ -1,6 +1,8 @@
 using Buttons;
+using System.Diagnostics.CodeAnalysis;
 using TMPro;
 using UnityEngine;
+using static Constants;
 
 public abstract class Animal : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public abstract class Animal : MonoBehaviour
 
     protected abstract string Text { get; }
     protected virtual ButtonType ButtonType => ButtonType.Hello;
+
+    [SuppressMessage(Category, CheckId, Justification = Justification)]
     protected void AddDiet<T>(T diet) where T : MonoBehaviour => gameObject.AddComponent<T>();
 
     private void Speak()
