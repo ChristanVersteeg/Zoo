@@ -12,7 +12,7 @@ namespace Buttons
         Hello
     }
 
-    public class ButtonManager : MonoBehaviour
+    public class UIManager : MonoBehaviour
     {
         public static Button[] buttons;
         public static TMP_InputField inputField;

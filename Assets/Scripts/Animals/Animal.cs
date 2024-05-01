@@ -19,8 +19,8 @@ public abstract class Animal : MonoBehaviour
     protected virtual void Behaviour()
     {
         if (BehaviourType == BehaviourType.Hello
-            && ButtonManager.inputField.text != string.Empty
-            && ButtonManager.inputField.text != name) return;
+            && UIManager.inputField.text != string.Empty
+            && UIManager.inputField.text != name) return;
 
         text.text = Text;
         balloon.SetActive(true);
@@ -36,6 +36,6 @@ public abstract class Animal : MonoBehaviour
         else name = GetComponent<ICarnivore>().Name;
     }
 
-    private void OnEnable() => ButtonManager.GetButton(BehaviourType).onClick.AddListener(Behaviour);
-    private void OnDisable() => ButtonManager.GetButton(BehaviourType).onClick.RemoveListener(Behaviour);
+    private void OnEnable() => UIManager.GetButton(BehaviourType).onClick.AddListener(Behaviour);
+    private void OnDisable() => UIManager.GetButton(BehaviourType).onClick.RemoveListener(Behaviour);
 }
