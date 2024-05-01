@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine;
-
-namespace Zoo
+﻿namespace Zoo
 {
     internal class Zebra : Animal, IHerbivore
     {

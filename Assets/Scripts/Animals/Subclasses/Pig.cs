@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-
-namespace Zoo
+﻿namespace Zoo
 {
     internal class Pig : Animal, IHerbivore, ICarnivore, ICanTrick
     {

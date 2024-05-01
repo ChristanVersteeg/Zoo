@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-
-namespace Zoo
+﻿namespace Zoo
 {
     internal class Lion : Animal, ICarnivore
     {

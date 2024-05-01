@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-
-namespace Zoo
+﻿namespace Zoo
 {
     internal class Tiger : Animal, ICarnivore, ICanTrick
     {
