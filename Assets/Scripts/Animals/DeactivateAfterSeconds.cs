@@ -1,22 +1,11 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Zoo
 {
     public class DeactivateAfterSeconds : MonoBehaviour
     {
+        private void Deactivate() => gameObject.SetActive(false);
 
-        [SerializeField]
-        private float seconds;
-        private void OnEnable()
-        {
-            StartCoroutine(Deactivate());
-        }
-
-        private IEnumerator Deactivate()
-        {
-            yield return new WaitForSeconds(seconds);
-            gameObject.SetActive(false);
-        }
+        private void OnEnable() => Invoke(nameof(Deactivate), 5);
     }
 }
